@@ -30,25 +30,13 @@
    <script src="js/jquery.js"></script>
    <script src="js/bootstrap.js"></script>
    <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+   <script src='main.js'></script>
+
+
+
    <script>
 
-      var jjCurrentMessage    = document.getElementById('jjCurrentMessage'), 
-          txtNewMassage       = document.getElementById('txtNewMassage'),
-          btUpdateMessage     = document.getElementById('btUpdateMessage'),
-          rootRef = new Firebase('https://realtime-messege.firebaseio.com/'),
-          currentMessageRef = rootRef.child('currentMessage');
-
-          btUpdateMessage.addEventListener('click', function(){
-
-            currentMessageRef.set(txtNewMassage.value);
-            //this will clear the input box after summit
-            txtNewMassage.value = '';
-
-          });
-
-          currentMessageRef.on('value', function(snapshot){
-              jjCurrentMessage.innerText = snapshot.val();
-          });
+      
 
 
    </script>
